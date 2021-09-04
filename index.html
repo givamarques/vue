@@ -8,7 +8,12 @@
     <title>Vue JS Crash Course 2021</title>
 </head>
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <img v-bind:src="picture" v-bind:alt="firstName" :class="gender">
+        <h1> {{firstName}} {{lastName}} </h1>
+        <h3>Email: {{email}}</h3>
+        <button :class="gender" v-on:click="getUser()">Get Random User</button>
+    </div>
 
     <script src="https://unpkg.com/vue@3.0.5"></script>
     <script src="app.js"></script>
